@@ -76,8 +76,13 @@ Figura 1. Imagen representacion de estados.
 
 Representacion de estados por las matrices:
 
+![Figura de ejemplo](Ejemplo2.png)
 
-   
+Figura 2. Imagen representacion de estados.
+
 
 ## Conclusiones
 El espacio de estados es una herramienta fundamental para modelar sistemas dinámicos complejos y multivariables. Permite diseñar controladores robustos al adaptar el modelo a las necesidades específicas de cada aplicación, facilitando la implementación de sistemas de control efectivos y flexibles.
+
+## Referencias
+[1]“AulasVirtualesECCI: Entrar al sitio”, Edu.co. [En línea]. Disponible: https://aulas.ecci.edu.co/course/view.php?id=9304 . [Consulta: 14 de Octubre de 2024].
