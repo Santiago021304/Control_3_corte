@@ -56,6 +56,10 @@ Para construir el modelo, se sigue un proceso de:
 4. $x_{1}(k+1) = x_{2}(k)$
    
    $x_{2}(k+1) = U(k)T^{2} - (\frac{BT}{M} - 2)x_{2}(k) - (1-\frac{BT}{M}+\frac{T^{2}K}{M})x_{1}(k)$
+
+![Figura de ejemplo](ejemplo.png)
+
+Figura 1. Imagen representacion de estados.
    
 
 ## Conclusiones
