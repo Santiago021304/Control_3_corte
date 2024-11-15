@@ -106,7 +106,17 @@ El control integral es esencial en sistemas multivariables para compensar el err
 
 - Ley de Control Integral: Se utiliza una ley de control con un vector de ganancias $F$ para incluir la referencia en el sistema. Esto permite corregir el error de estado estacionario al hacer que los estados sigan la referencia deseada, manteniendo el error de estado en cero.
 
+  $u(k) = -Kx(k) + Fr(k)$
+
+  Donde:
+  - $K$ es el vector de ganancias de retroalimentación de estados.
+  - $F$ es el vector de ganancias para la referencia.
+
+
 - Variables de Estado Ampliadas: Se amplían las variables del sistema mediante la introducción de una nueva variable de referencia. Las ecuaciones de estado se redefinen usando matrices extendidas que incluyen los términos $A$, $B$, $C$ y un control integral. Esto permite una compensación automática de errores en el sistema.
+
+   $x(k+1) = (A - BK)x(k) + BFr(k)$
+  
 
 - Metodología de Diseño: 
   1. Definir matrices ampliadas $Aa$, $Ba$ y $Ca$.
@@ -125,6 +135,12 @@ Los observadores de estados permiten estimar las variables de estado que no son 
   2. Polinomio Característico: Determinar los coeficientes del polinomio característico en lazo abierto. En sistemas que están en forma canónica observable, esta tarea se simplifica.
   3. Selección de Polos del Observador: Definir el polinomio deseado mediante la ubicación de los polos del observador en la posición deseada, asegurando una respuesta rápida y precisa.
   4. Cálculo de la Matriz de Ganancias del Observador: La matriz de ganancias $K$ se obtiene mediante los métodos de diseño que posicionan los polos en los lugares óptimos.
+     La ecuación del observador es:
+     
+  $\hat{x}(k+1) = Ax(k) + Bu + K_{p}(y - C\hat{x})$
+
+  Donde $K_{p}$ es la ganancia del observador, y $\hat{x}$ es el estado estimado.
+
 
 ## Manejo del Error de Estimación
 
@@ -132,7 +148,17 @@ El error en la estimación de estados puede variar según el diseño del observa
 
 - Error sin Vector de Ganancias: El error de estimación depende únicamente de la matriz $A$ del sistema, ya que no existe un control activo sobre el error de estimación. Este enfoque puede no ser suficiente en sistemas donde se requiere una mayor precisión en la estimación de estados.
 
+  $e(k+1) = A \cdot e(k)$
+
+  Donde $e(k) = x(k) - \hat{x}(k)$ es el error de estimación.
+
+
 - Error con Vector de Ganancias: Al introducir un vector de ganancias $K$ en el observador, el sistema ajusta los polos y controla activamente el error de estimación. Este enfoque mejora la precisión del observador y reduce el error en la estimación de los estados no medibles, logrando una mejor convergencia hacia los estados reales.
+  
+  $e(k+1) = (A - K_p C) e(k)$
+
+  Esto permite reducir el error de estimación al ajustar los polos del sistema observado.
+
 
 ## Conclusión
 
