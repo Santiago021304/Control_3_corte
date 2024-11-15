@@ -57,9 +57,26 @@ Para construir el modelo, se sigue un proceso de:
    
    $x_{2}(k+1) = U(k)T^{2} - (\frac{BT}{M} - 2)x_{2}(k) - (1-\frac{BT}{M}+\frac{T^{2}K}{M})x_{1}(k)$
 
-![Figura de ejemplo](ejemplo.png)
+Representacion de estados por las matrices:
+
+![Figura de ejemplo](Ejemplo.png)
 
 Figura 1. Imagen representacion de estados.
+
+## Ejercicio 
+1. $Y(k+2) = 0.5U(k) - 2Y(k+1) - 10Y(k)$
+2. $Y(k) = x_{1}(k)$
+3. $Y(k+1)=x_{1}(k+1)=x_{2}(k)$
+   
+   $x_{2}(k+1)=Y(k+2)$
+   
+4. $x_{1}(k+1) = x_{2}(k)$
+   
+   $x_{2}(k+1) = 0.5U(k) - 2x_{2}(k) - 10x_{1}(k)$
+
+Representacion de estados por las matrices:
+
+
    
 
 ## Conclusiones
